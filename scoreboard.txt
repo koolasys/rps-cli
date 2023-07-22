@@ -1,0 +1,29 @@
+"""
+    File name: scoreboard.txt
+	Program name: Rocks, Papers, and Scissors CLI
+	Description: A rock, paper, scissors CLI game
+    Author: Marvin Ndlovu
+    Date created: 22/07/2023
+    Date last modified: 22/07/2023
+    Python Version: 3.10.6
+"""
+
+## The scoreboard of previous player
+
+
+Player	Rounds	Won	Lost	Drew	Final Score
+Me	3	0	2	1
+Marviom	2	2	0	0
+Mayz	2	0	1	1
+Sd	2	1	0	1
+Ds	0	0	0	0
+Ds	2	1	1	0
+Fds	0	0	0	0
+Gfd	3	0	0	3
+L	1	0	0	1	0.5
+Marvin	5	1	0	4	3.0
+Sx	0	0	0	0	0
+Kl	0	0	0	0	0
+Xa	1	0	0	1	0.5
+Tduk	0	0	0	0	0
+Marvin	8	3	1	4	0.5
