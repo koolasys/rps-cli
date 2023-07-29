@@ -15,7 +15,7 @@
 import random
 from misc import processing, dash_divider, intro, init_loader, write_text, randomize, breather, bs, be, save_score
 from _commands import _lives, _score, _exit, _rules
-from rules import loss, win, draw, invalid_play, game_over
+from rules import loss, win, draw, invalid_play, game_over, game_over_list
 
 
 # Sroll effect time
@@ -25,16 +25,15 @@ init_loader(0.05)
 
 breather(1) 
 write_text("\n"+bs+"Welcom to Rocks, Papers and Scissors CLI."+be)
-write_text("Visit https://github.com/mrvn/ for more.")
+write_text("Visit https://github.com/mrvn/rps-cli for more.")
 print("")
 
 
 class app:
 
 	# Game play variables
-	lives = 1
+	lives = 3
 	wins = losses = draws = rounds = score = 0
-	scoreboard = open("scoreboard.txt","a")
 
 
 	# Game entry
@@ -153,14 +152,25 @@ class app:
 				_score(rounds, wins, draws, losses, score, T)
 				
 			elif player_rps=="exit":
-				save_score(score, rounds)
+				save_score(score, rounds, wins, losses, draws, username, T)
+				_exit(score, rounds, T)
 
 			else:
 				invalid_play(T)
 
 			# Game life cycle
 			if lives==0:
-				game_over(rounds, wins, draws, T)
+				message = randomize(game_over_list)
+				breather(T)
+				write_text("Sorry, you have run out of lives")
+				breather(T)
+				write_text(message)
+				breather(T)
+				print("")
+				breather(T)
+				save_score(score, rounds, wins, losses, draws, username, T)
+				game_over(T)
+				exit()
 
 					
 

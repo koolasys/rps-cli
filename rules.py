@@ -13,7 +13,7 @@
 ## The House Rules of RPS
 
 # Imports
-from misc import dash_divider, write_text, breather, randomize
+from misc import dash_divider, write_text, breather, randomize, save_score
 
 
 # Variables
@@ -92,25 +92,7 @@ game_over_list = [
 
 
 # End of game lives
-def game_over(rounds, wins, draws, t):
-	message = randomize(game_over_list)
-	breather(t)
-	write_text("Sorry, you have run out of lives")
-	breather(t)
-	write_text(message)
-	breather(t)
-	print("")
-	breather(t)
-	write_text("Your Score")
-	breather(t)
-	write_text("Rounds played: "+str(rounds))
-	breather(t)
-	write_text("Rounds won: "+str(wins))
-	breather(t)
-	write_text("Rounds lost: "+str(rounds-wins-draws))
-	breather(t)
-	write_text("Rounds drew: "+str(draws))
-	breather(t)
+def game_over(t):
 	print("")
 	breather(t)
 	dash_divider()

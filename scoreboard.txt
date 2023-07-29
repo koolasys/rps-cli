@@ -12,18 +12,13 @@
 
 
 Player	Rounds	Won	Lost	Drew	Final Score
-Me	3	0	2	1
-Marviom	2	2	0	0
-Mayz	2	0	1	1
-Sd	2	1	0	1
-Ds	0	0	0	0
-Ds	2	1	1	0
-Fds	0	0	0	0
-Gfd	3	0	0	3
-L	1	0	0	1	0.5
+KK	1	0	0	1	0.5
 Marvin	5	1	0	4	3.0
-Sx	0	0	0	0	0
-Kl	0	0	0	0	0
-Xa	1	0	0	1	0.5
-Tduk	0	0	0	0	0
+David	0	0	0	0	0
+Cammy	0	0	0	0	0
+X	1	0	0	1	0.5
+Me	0	0	0	0	0
 Marvin	8	3	1	4	0.5
+Foo	0	0	0	0	0
+Ike	1	0	1	0	-1.0
+Playa	1	0	0	1	0.5

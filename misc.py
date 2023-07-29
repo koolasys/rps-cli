@@ -70,6 +70,12 @@ def intro(lives, t):
 	breather(t)
 	write_text("You start with "+str(lives)+" lives")
 	breather(t)
+	write_text("Rocks beats Scissors")
+	breather(t)
+	write_text("Scissors beats Paper")
+	breather(t)
+	write_text("Paper beats Rock")
+	breather(t)
 	write_text("If you win, you gain a life.")
 	breather(t)
 	write_text("If you lose, you lose a life.")
@@ -157,7 +163,9 @@ def randomize(list):
 
 
 # Write score to file
-def save_score(score, rounds):
+def save_score(score, rounds, wins, losses, draws, username, t):
+	scoreboard = open("./scoreboard.txt","a")
+
 	if rounds!=0:
 		score = score/rounds
 	scoreboard.write(username)
@@ -173,4 +181,19 @@ def save_score(score, rounds):
 	scoreboard.write(str(score))
 	scoreboard.write("\n")
 	scoreboard.close()
-	_exit(rounds, T)
+	
+
+	write_text("YOUR SCORE")
+	breather(t)
+	write_text("Rounds played: "+str(rounds))
+	breather(t)
+	write_text("Rounds won: "+str(wins))
+	breather(t)
+	write_text("Rounds lost: "+str(rounds-wins-draws))
+	breather(t)
+	write_text("Rounds drew: "+str(draws))
+	breather(t)
+	print("")
+	breather(t)
+	print("Your score has been recorded.")
+

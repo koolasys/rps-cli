@@ -11,11 +11,11 @@
 ## House Commands of RPS
 
 # Imports
-from misc import write_text, stars, breather
+from misc import write_text, stars, breather, save_score
 
 
 # Command to exit the game
-def _exit(rounds, t):
+def _exit(score, rounds, t):
 	breather(t)
 	print("")
 	breather(t)
@@ -34,9 +34,8 @@ def _exit(rounds, t):
 	breather(t)
 	write_text("Your score has been recorded")
 	breather(t)
-	
-	write_text("""\n.\n.\n.""")
 	print("")
+	
 	i = 80
 	while i > 0:
 		breather(0.1)
@@ -44,8 +43,9 @@ def _exit(rounds, t):
 		i -= 1
 	print("")
 	print("#"*80)
-	breather(1)
+	breather(t)
 	exit()
+	
 
 
 # Command to view current score
@@ -76,6 +76,17 @@ def _score(rounds, wins, draws, losses, score, t):
 	breather(t)
 	print("")
 	breather(t)
+	write_text("""\n.\n.\n.""")
+	print("")
+	i = 80
+	while i > 0:
+		breather(0.1)
+		print("-", end="", flush=True)
+		i -= 1
+	print("")
+	print("#"*80)
+	breather(1)
+	exit()
 
 
 # Command to view current lives left
